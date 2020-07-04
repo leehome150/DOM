@@ -34,7 +34,7 @@ window.dom = {
     const array = [];
     let x = node.firstChild;
     while (x) {
-      array.push.call(null, dom.remove(node));
+      array.push.call(null, dom.remove(node.firstChild));
       x = node.firstChild;
     }
     return array;
@@ -77,7 +77,7 @@ window.dom = {
   },
   class: {
     add(node, className) {
-      //查看class
+      //加class
       node.classList.add(className);
     },
     remove(node, className) {
